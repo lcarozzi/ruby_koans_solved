@@ -21,7 +21,7 @@ class AboutKeywordArguments < Neo::Koan
     exception = assert_raise (ArgumentError) do
       method_with_keyword_arguments_with_mandatory_argument
     end
-    # ACA NO ENTIENDO PORQUE NO ME MATCHEA "wrong number of arguments (0 for 1)" 
+    # it should match "wrong number of arguments (0 for 1)" 
     assert_match(/./, exception.message)
   end
 

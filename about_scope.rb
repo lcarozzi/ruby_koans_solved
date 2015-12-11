@@ -17,7 +17,7 @@ class AboutScope < Neo::Koan
     end
   end
 
-################################# DUDA: no entiendo porque no anda #################################
+################################# it shold raise the NameError #################################
   def test_dog_is_not_available_in_the_current_scope
     #assert_raise(NameError) do
       Dog.new
