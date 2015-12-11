@@ -37,14 +37,12 @@ class AboutMethods < Neo::Koan
     exception = assert_raise(ArgumentError) do
       my_global_method
     end
-    ######### should match with "wrong number of arguments (0 for 2)" #########
-    assert_match(/./, exception.message)
+    assert_match(/wrong number/, exception.message)
 
     exception = assert_raise(ArgumentError) do
       my_global_method(1,2,3)
     end
-    ######### should match with "wrong number of arguments (3 for 2)" #########
-    assert_match(/./, exception.message)
+    assert_match(/wrong number/, exception.message)
   end
 
   # ------------------------------------------------------------------
@@ -123,7 +121,7 @@ class AboutMethods < Neo::Koan
     exception = assert_raise(NoMethodError) do
       self.my_private_method
     end
-    assert_match /./, exception.message
+    assert_match /method/, exception.message
   end
 
   # ------------------------------------------------------------------
